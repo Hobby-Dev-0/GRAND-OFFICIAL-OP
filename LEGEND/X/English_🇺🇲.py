@@ -7,9 +7,9 @@ from telethon import *
 from telethon.tl import functions, types
 from telethon.tl.types import *
 
-from DaisyX import MONGO_DB_URI
-from DaisyX import telethn as tbot
-from DaisyX.events import register
+from LEGEND import MONGO_DB_URI
+from LEGEND import telethn as tbot
+from LEGEND.events import register
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)

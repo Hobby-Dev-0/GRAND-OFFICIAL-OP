@@ -8,7 +8,7 @@ from pathlib import Path
 from pymongo import MongoClient
 from telethon import events
 
-from DaisyX import CMD_LIST, LOAD_PLUG, MONGO_DB_URI, tbot, telethn, ubot
+from LEGEND import CMD_LIST, LOAD_PLUG, MONGO_DB_URI, tbot, telethn, ubot
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
@@ -186,8 +186,8 @@ def load_module(shortname):
     elif shortname.endswith("_"):
         import importlib
 
-        path = Path(f"DaisyX/InfinityBotProjects/{shortname}.py")
-        name = "DaisyX.InfinityBotProjects.{}".format(shortname)
+        path = Path(f"LEGEND/InfinityBotProjects/{shortname}.py")
+        name = "LEGEND.InfinityBotProjects.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -195,8 +195,8 @@ def load_module(shortname):
     else:
         import importlib
 
-        path = Path(f"DaisyX/InfinityBotProjects/{shortname}.py")
-        name = "DaisyX.InfinityBotProjects.{}".format(shortname)
+        path = Path(f"LEGEND/InfinityBotProjects/{shortname}.py")
+        name = "LEGEND.InfinityBotProjects.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.register = register
@@ -204,11 +204,11 @@ def load_module(shortname):
         mod.tbot = tbot
         mod.logger = logging.getLogger(shortname)
         spec.loader.exec_module(mod)
-        sys.modules["DaisyX.InfinityBotProjects." + shortname] = mod
+        sys.modules["LEGEND.InfinityBotProjects." + shortname] = mod
         print("Successfully imported " + shortname)
 
 
-path = "DaisyX/InfinityBotProjects/*.py"
+path = "LEGEND/InfinityBotProjects/*.py"
 files = glob.glob(path)
 for name in files:
     with open(name) as f:

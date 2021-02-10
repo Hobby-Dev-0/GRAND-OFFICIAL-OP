@@ -1,6 +1,6 @@
 from sqlalchemy import BigInteger, Boolean, Column, String, UnicodeText
 
-from DaisyX.modules.sql import BASE, SESSION
+from LEGEND.modules.sql import BASE, SESSION
 
 
 class Welcome(BASE):

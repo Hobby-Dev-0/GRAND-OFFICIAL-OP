@@ -7,9 +7,9 @@ from pymongo import MongoClient
 from telethon import types
 from telethon.tl import functions
 
-from DaisyX import MONGO_DB_URI, REM_BG_API_KEY, TEMP_DOWNLOAD_DIRECTORY
-from DaisyX import telethn as tbot
-from DaisyX.events import register
+from LEGEND import MONGO_DB_URI, REM_BG_API_KEY, TEMP_DOWNLOAD_DIRECTORY
+from LEGEND import telethn as tbot
+from LEGEND.events import register
 
 
 async def is_register_admin(chat, user):

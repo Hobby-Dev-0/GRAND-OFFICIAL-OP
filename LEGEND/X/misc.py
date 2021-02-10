@@ -27,12 +27,12 @@ from telegram.ext.dispatcher import run_async
 from telegram.utils.helpers import escape_markdown
 from tswift import Song
 
-from DaisyX import DEV_USERS, OWNER_ID, dispatcher
-from DaisyX.__main__ import GDPR, STATS
-from DaisyX.modules.disable import DisableAbleCommandHandler
-from DaisyX.modules.helper_funcs.alternate import send_action, typing_action
-from DaisyX.modules.helper_funcs.chat_status import user_admin
-from DaisyX.modules.helper_funcs.filters import CustomFilters
+from LEGEND import DEV_USERS, OWNER_ID, dispatcher
+from LEGEND.__main__ import GDPR, STATS
+from LEGEND.modules.disable import DisableAbleCommandHandler
+from LEGEND.modules.helper_funcs.alternate import send_action, typing_action
+from LEGEND.modules.helper_funcs.chat_status import user_admin
+from LEGEND.modules.helper_funcs.filters import CustomFilters
 
 
 @run_async

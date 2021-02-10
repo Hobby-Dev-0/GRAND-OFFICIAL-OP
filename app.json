@@ -6,9 +6,9 @@
          "anime",
          "group",
          "manager",
-         "DaisyX"
+         "LEGEND"
       ],   
-   "repository": "https://github.com/InukaAsith/DaisyX",
+   "repository": "https://github.com/InukaAsith/LEGEND",
    "addons": [
       {
          "options": {
@@ -145,7 +145,7 @@
          "value": ""
       },  
       "MONGO_DB_URI  ": {
-         "description": "Mongo db URI here. Get it from mongodb.com create acc. Crete organization. Create a cluster connection mode from everywhere give user pass get uri. replace <password> with pass <name> with DaisyX",
+         "description": "Mongo db URI here. Get it from mongodb.com create acc. Crete organization. Create a cluster connection mode from everywhere give user pass get uri. replace <password> with pass <name> with LEGEND",
          "required": true,
          "value": ""
       },    
