@@ -18,9 +18,9 @@ jobs:
 
         with:
 
-          find: "DaisyX"
+          find: "DaisyX.modules"
 
-          replace: "LEGEND"
+          replace: "LEGEND.X"
 
       - name: Create Pull Request
 
