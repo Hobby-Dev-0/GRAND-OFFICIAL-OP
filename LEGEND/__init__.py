@@ -7,12 +7,9 @@ import spamwatch
 import telegram.ext as tg
 from pyrogram import Client, errors
 from telethon import TelegramClient
-from telethon.sessions import StringSession
 
 StartTime = time.time()
-CMD_LIST = {}
-CMD_HELP = {}
-LOAD_PLUG = {}
+
 # enable logging
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -85,14 +82,6 @@ if ENV:
     AI_API_KEY = os.environ.get("AI_API_KEY", None)
     WALL_API = os.environ.get("WALL_API", None)
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None)
-    MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
-    VIRUS_API_KEY = os.environ.get("VIRUS_API_KEY", None)
-    OPENWEATHERMAP_ID = os.environ.get("OPENWEATHERMAP_ID", None)
-    WOLFRAM_ID = os.environ.get("WOLFRAM_ID", None)
-    STRING_SESSION = os.environ.get("STRING_SESSION", None)
-    TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
-    BOT_ID = int(os.environ.get("BOT_ID", None))
-    REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
     YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
     SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", None)
     SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None)
@@ -115,7 +104,7 @@ if ENV:
         raise Exception("Your blacklisted chats list does not contain valid integers.")
 
 else:
-    from LEGEND.config import Development as Config
+    from DaisyX.config import Development as Config
 
     TOKEN = Config.TOKEN
 
@@ -148,32 +137,53 @@ else:
     except ValueError:
         raise Exception("Your tiger users list does not contain valid integers.")
 
-    
+    EVENT_LOGS = Config.EVENT_LOGS
+    WEBHOOK = Config.WEBHOOK
+    URL = Config.URL
+    PORT = Config.PORT
+    CERT_PATH = Config.CERT_PATH
+    API_ID = Config.API_ID
+    API_HASH = Config.API_HASH
+
+    DB_URI = Config.SQLALCHEMY_DATABASE_URI
+    DONATION_LINK = Config.DONATION_LINK
+    LOAD = Config.LOAD
+    NO_LOAD = Config.NO_LOAD
+    DEL_CMDS = Config.DEL_CMDS
+    STRICT_GBAN = Config.STRICT_GBAN
+    WORKERS = Config.WORKERS
+    BAN_STICKER = Config.BAN_STICKER
+    ALLOW_EXCL = Config.ALLOW_EXCL
+    CASH_API_KEY = Config.CASH_API_KEY
+    TIME_API_KEY = Config.TIME_API_KEY
+    AI_API_KEY = Config.AI_API_KEY
+    WALL_API = Config.WALL_API
+    SUPPORT_CHAT = Config.SUPPORT_CHAT
+    SPAMWATCH_SUPPORT_CHAT = Config.SPAMWATCH_SUPPORT_CHAT
+    SPAMWATCH_API = Config.SPAMWATCH_API
+    YOUTUBE_API_KEY = Config.YOUTUBE_API_KEY
+    INFOPIC = Config.INFOPIC
+
     try:
         BL_CHATS = set(int(x) for x in Config.BL_CHATS or [])
     except ValueError:
         raise Exception("Your blacklisted chats list does not contain valid integers.")
 
 DRAGONS.add(OWNER_ID)
+DEV_USERS.add(OWNER_ID)
+
+if not SPAMWATCH_API:
+    sw = None
+    LOGGER.warning("SpamWatch API key missing! recheck your config.")
 else:
     sw = spamwatch.Client(SPAMWATCH_API)
 
-if STRING_SESSION:
-    ubot = TelegramClient(StringSession(STRING_SESSION), API_ID, API_HASH)
-else:
-    sys.exit(1)
-
-try:
-    ubot.start()
-except BaseException:
-    print("Network Error !")
-    sys.exit(1)
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("saitama", API_ID, API_HASH)
-pbot = Client("LEGEND", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+pbot = Client("DaisyX", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 dispatcher = updater.dispatcher
-tbot = telethn
+
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
@@ -182,7 +192,7 @@ DEMONS = list(DEMONS)
 TIGERS = list(TIGERS)
 
 # Load at end to ensure all prev variables have been set
-from LEGEND.modules.helper_funcs.handlers import (
+from DaisyX.modules.helper_funcs.handlers import (
     CustomCommandHandler,
     CustomMessageHandler,
     CustomRegexHandler,
