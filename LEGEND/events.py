@@ -186,8 +186,8 @@ def load_module(shortname):
     elif shortname.endswith("_"):
         import importlib
 
-        path = Path(f"LEGEND/InfinityBotProjects/{shortname}.py")
-        name = "LEGEND.InfinityBotProjects.{}".format(shortname)
+        path = Path(f"LEGEND/X/{shortname}.py")
+        name = "LEGEND.X.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -195,8 +195,8 @@ def load_module(shortname):
     else:
         import importlib
 
-        path = Path(f"LEGEND/InfinityBotProjects/{shortname}.py")
-        name = "LEGEND.InfinityBotProjects.{}".format(shortname)
+        path = Path(f"LEGEND/X/{shortname}.py")
+        name = "LEGEND.X.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.register = register
@@ -204,11 +204,11 @@ def load_module(shortname):
         mod.tbot = tbot
         mod.logger = logging.getLogger(shortname)
         spec.loader.exec_module(mod)
-        sys.modules["LEGEND.InfinityBotProjects." + shortname] = mod
+        sys.modules["LEGEND.X." + shortname] = mod
         print("Successfully imported " + shortname)
 
 
-path = "LEGEND/InfinityBotProjects/*.py"
+path = "LEGEND/X/*.py"
 files = glob.glob(path)
 for name in files:
     with open(name) as f:
