@@ -18,9 +18,9 @@ jobs:
 
         with:
 
-          find: "DaisyX.modules"
+          find: "InfinityBotProjects"
 
-          replace: "LEGEND.X"
+          replace: "X"
 
       - name: Create Pull Request
 
