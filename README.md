@@ -1,4 +1,4 @@
-# Elizabeth 🔥
+# LEGEND BOT
 
 
 ## How To Host
