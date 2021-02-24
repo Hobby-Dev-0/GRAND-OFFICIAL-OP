@@ -18,9 +18,9 @@ jobs:
 
         with:
 
-          find: "InfinityBotProjects"
+          find: "juliabot"
 
-          replace: "X"
+          replace: "legend"
 
       - name: Create Pull Request
 
