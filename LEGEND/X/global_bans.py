@@ -14,7 +14,7 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html
 
-import LEGEND.modules.sql.global_bans_sql as sql
+import LEGEND.X.sql.global_bans_sql as sql
 from LEGEND import (
     DEMONS,
     DEV_USERS,
@@ -29,14 +29,14 @@ from LEGEND import (
     dispatcher,
     sw,
 )
-from LEGEND.modules.helper_funcs.chat_status import (
+from LEGEND.X.helper_funcs.chat_status import (
     is_user_admin,
     support_plus,
     user_admin,
 )
-from LEGEND.modules.helper_funcs.extraction import extract_user, extract_user_and_text
-from LEGEND.modules.helper_funcs.misc import send_to_list
-from LEGEND.modules.sql.users_sql import get_user_com_chats
+from LEGEND.X.helper_funcs.extraction import extract_user, extract_user_and_text
+from LEGEND.X.helper_funcs.misc import send_to_list
+from LEGEND.X.sql.users_sql import get_user_com_chats
 
 GBAN_ENFORCE_GROUP = 6
 

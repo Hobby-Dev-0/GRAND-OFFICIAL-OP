@@ -3,7 +3,7 @@ from telegram import Location, ParseMode
 from telegram.ext import CommandHandler, run_async
 
 from LEGEND import dispatcher
-from LEGEND.modules.helper_funcs.chat_status import user_admin
+from LEGEND.X.helper_funcs.chat_status import user_admin
 
 GMAPS_LOC = "https://maps.googleapis.com/maps/api/geocode/json"
 

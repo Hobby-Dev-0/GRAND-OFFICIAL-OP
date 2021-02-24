@@ -7,8 +7,8 @@ from telegram.ext import CallbackContext, CommandHandler, Filters
 from telegram.ext.dispatcher import run_async
 
 from LEGEND import OWNER_ID, dispatcher
-from LEGEND.modules.helper_funcs.extraction import extract_user
-from LEGEND.modules.sql.users_sql import get_user_com_chats
+from LEGEND.X.helper_funcs.extraction import extract_user
+from LEGEND.X.sql.users_sql import get_user_com_chats
 
 
 @run_async

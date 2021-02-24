@@ -17,7 +17,7 @@ from telegram.ext import CallbackContext, run_async
 from telegram.utils.helpers import mention_html
 
 from LEGEND import dispatcher
-from LEGEND.modules.disable import DisableAbleCommandHandler
+from LEGEND.X.disable import DisableAbleCommandHandler
 
 combot_stickers_url = "https://combot.org/telegram/stickers?q="
 

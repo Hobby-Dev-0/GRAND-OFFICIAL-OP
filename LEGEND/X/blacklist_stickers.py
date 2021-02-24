@@ -7,16 +7,16 @@ from telegram.ext import CallbackContext, CommandHandler, Filters, MessageHandle
 from telegram.ext.dispatcher import run_async
 from telegram.utils.helpers import mention_html, mention_markdown
 
-import LEGEND.modules.sql.blsticker_sql as sql
+import LEGEND.X.sql.blsticker_sql as sql
 from LEGEND import LOGGER, dispatcher
-from LEGEND.modules.connection import connected
-from LEGEND.modules.disable import DisableAbleCommandHandler
-from LEGEND.modules.helper_funcs.alternate import send_message
-from LEGEND.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from LEGEND.modules.helper_funcs.misc import split_message
-from LEGEND.modules.helper_funcs.string_handling import extract_time
-from LEGEND.modules.log_channel import loggable
-from LEGEND.modules.warns import warn
+from LEGEND.X.connection import connected
+from LEGEND.X.disable import DisableAbleCommandHandler
+from LEGEND.X.helper_funcs.alternate import send_message
+from LEGEND.X.helper_funcs.chat_status import user_admin, user_not_admin
+from LEGEND.X.helper_funcs.misc import split_message
+from LEGEND.X.helper_funcs.string_handling import extract_time
+from LEGEND.X.log_channel import loggable
+from LEGEND.X.warns import warn
 
 
 @run_async

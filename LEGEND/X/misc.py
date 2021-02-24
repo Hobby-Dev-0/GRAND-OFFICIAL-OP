@@ -29,10 +29,10 @@ from tswift import Song
 
 from LEGEND import DEV_USERS, OWNER_ID, dispatcher
 from LEGEND.__main__ import GDPR, STATS
-from LEGEND.modules.disable import DisableAbleCommandHandler
-from LEGEND.modules.helper_funcs.alternate import send_action, typing_action
-from LEGEND.modules.helper_funcs.chat_status import user_admin
-from LEGEND.modules.helper_funcs.filters import CustomFilters
+from LEGEND.X.disable import DisableAbleCommandHandler
+from LEGEND.X.helper_funcs.alternate import send_action, typing_action
+from LEGEND.X.helper_funcs.chat_status import user_admin
+from LEGEND.X.helper_funcs.filters import CustomFilters
 
 
 @run_async

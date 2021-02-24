@@ -11,7 +11,7 @@ from sqlalchemy import (
 )
 
 from LEGEND import dispatcher
-from LEGEND.modules.sql import BASE, SESSION
+from LEGEND.X.sql import BASE, SESSION
 
 
 class Users(BASE):

@@ -3,7 +3,7 @@ from typing import Union
 
 from sqlalchemy import Boolean, Column, Integer, String
 
-from LEGEND.modules.sql import BASE, SESSION
+from LEGEND.X.sql import BASE, SESSION
 
 
 class ReportingUserSettings(BASE):

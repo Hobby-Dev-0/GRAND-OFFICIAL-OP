@@ -7,22 +7,22 @@ from telegram import Message, ParseMode
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async
 
-# from LEGEND.modules.sql import warns_sql as warnssql
-import LEGEND.modules.sql.blacklist_sql as blacklistsql
+# from LEGEND.X.sql import warns_sql as warnssql
+import LEGEND.X.sql.blacklist_sql as blacklistsql
 
-# from LEGEND.modules.sql import cust_filters_sql as filtersql
-# import LEGEND.modules.sql.welcome_sql as welcsql
-import LEGEND.modules.sql.locks_sql as locksql
-import LEGEND.modules.sql.notes_sql as sql
+# from LEGEND.X.sql import cust_filters_sql as filtersql
+# import LEGEND.X.sql.welcome_sql as welcsql
+import LEGEND.X.sql.locks_sql as locksql
+import LEGEND.X.sql.notes_sql as sql
 
-# from LEGEND.modules.rules import get_rules
-import LEGEND.modules.sql.rules_sql as rulessql
+# from LEGEND.X.rules import get_rules
+import LEGEND.X.sql.rules_sql as rulessql
 from LEGEND import JOIN_LOGGER, LOGGER, OWNER_ID, dispatcher
 from LEGEND.__main__ import DATA_IMPORT
-from LEGEND.modules.connection import connected
-from LEGEND.modules.helper_funcs.alternate import typing_action
-from LEGEND.modules.helper_funcs.chat_status import user_admin
-from LEGEND.modules.sql import disable_sql as disabledsql
+from LEGEND.X.connection import connected
+from LEGEND.X.helper_funcs.alternate import typing_action
+from LEGEND.X.helper_funcs.chat_status import user_admin
+from LEGEND.X.sql import disable_sql as disabledsql
 
 
 @run_async

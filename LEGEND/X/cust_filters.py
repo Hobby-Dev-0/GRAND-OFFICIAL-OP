@@ -16,22 +16,22 @@ from telegram.ext import (
 from telegram.utils.helpers import escape_markdown, mention_html
 
 from LEGEND import DRAGONS, LOGGER, dispatcher
-from LEGEND.modules.connection import connected
-from LEGEND.modules.disable import DisableAbleCommandHandler
-from LEGEND.modules.helper_funcs.alternate import send_message, typing_action
-from LEGEND.modules.helper_funcs.chat_status import user_admin
-from LEGEND.modules.helper_funcs.extraction import extract_text
-from LEGEND.modules.helper_funcs.filters import CustomFilters
-from LEGEND.modules.helper_funcs.handlers import MessageHandlerChecker
-from LEGEND.modules.helper_funcs.misc import build_keyboard_parser
-from LEGEND.modules.helper_funcs.msg_types import get_filter_type
-from LEGEND.modules.helper_funcs.string_handling import (
+from LEGEND.X.connection import connected
+from LEGEND.X.disable import DisableAbleCommandHandler
+from LEGEND.X.helper_funcs.alternate import send_message, typing_action
+from LEGEND.X.helper_funcs.chat_status import user_admin
+from LEGEND.X.helper_funcs.extraction import extract_text
+from LEGEND.X.helper_funcs.filters import CustomFilters
+from LEGEND.X.helper_funcs.handlers import MessageHandlerChecker
+from LEGEND.X.helper_funcs.misc import build_keyboard_parser
+from LEGEND.X.helper_funcs.msg_types import get_filter_type
+from LEGEND.X.helper_funcs.string_handling import (
     button_markdown_parser,
     escape_invalid_curly_brackets,
     markdown_to_html,
     split_quotes,
 )
-from LEGEND.modules.sql import cust_filters_sql as sql
+from LEGEND.X.sql import cust_filters_sql as sql
 
 HANDLER_GROUP = 10
 

@@ -6,7 +6,7 @@ from telegram.ext import CallbackContext, CommandHandler, run_async
 from telethon import events
 
 from LEGEND import dispatcher, telethn
-from LEGEND.modules.helper_funcs.chat_status import dev_plus
+from LEGEND.X.helper_funcs.chat_status import dev_plus
 
 DEBUG_MODE = False
 

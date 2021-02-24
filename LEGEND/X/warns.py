@@ -26,24 +26,24 @@ from telegram.ext import (
 from telegram.utils.helpers import mention_html
 
 from LEGEND import TIGERS, WOLVES, dispatcher
-from LEGEND.modules.disable import DisableAbleCommandHandler
-from LEGEND.modules.helper_funcs.chat_status import (
+from LEGEND.X.disable import DisableAbleCommandHandler
+from LEGEND.X.helper_funcs.chat_status import (
     bot_admin,
     can_restrict,
     is_user_admin,
     user_admin,
     user_admin_no_reply,
 )
-from LEGEND.modules.helper_funcs.extraction import (
+from LEGEND.X.helper_funcs.extraction import (
     extract_text,
     extract_user,
     extract_user_and_text,
 )
-from LEGEND.modules.helper_funcs.filters import CustomFilters
-from LEGEND.modules.helper_funcs.misc import split_message
-from LEGEND.modules.helper_funcs.string_handling import split_quotes
-from LEGEND.modules.log_channel import loggable
-from LEGEND.modules.sql import warns_sql as sql
+from LEGEND.X.helper_funcs.filters import CustomFilters
+from LEGEND.X.helper_funcs.misc import split_message
+from LEGEND.X.helper_funcs.string_handling import split_quotes
+from LEGEND.X.log_channel import loggable
+from LEGEND.X.sql import warns_sql as sql
 
 WARN_HANDLER_GROUP = 9
 CURRENT_WARNING_FILTER_STRING = "<b>Current warning filters in this chat:</b>\n"

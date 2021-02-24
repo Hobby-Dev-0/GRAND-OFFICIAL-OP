@@ -6,8 +6,8 @@ from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, run_async
 
 from LEGEND import StartTime, dispatcher
-from LEGEND.modules.disable import DisableAbleCommandHandler
-from LEGEND.modules.helper_funcs.chat_status import sudo_plus
+from LEGEND.X.disable import DisableAbleCommandHandler
+from LEGEND.X.helper_funcs.chat_status import sudo_plus
 
 sites_list = {
     "Telegram": "https://api.telegram.org",

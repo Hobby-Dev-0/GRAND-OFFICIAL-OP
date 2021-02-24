@@ -8,9 +8,9 @@ from telegram.ext import CallbackContext, CommandHandler, run_async
 from telegram.utils.helpers import mention_html
 
 from LEGEND import DEMONS, DEV_USERS, DRAGONS, OWNER_ID, TIGERS, WOLVES, dispatcher
-from LEGEND.modules.helper_funcs.chat_status import dev_plus, sudo_plus, whitelist_plus
-from LEGEND.modules.helper_funcs.extraction import extract_user
-from LEGEND.modules.log_channel import gloggable
+from LEGEND.X.helper_funcs.chat_status import dev_plus, sudo_plus, whitelist_plus
+from LEGEND.X.helper_funcs.extraction import extract_user
+from LEGEND.X.log_channel import gloggable
 
 ELEVATED_USERS_FILE = os.path.join(os.getcwd(), "LEGEND/elevated_users.json")
 

@@ -12,10 +12,10 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
 from telegram.utils.helpers import escape_markdown
 
-import LEGEND.modules.sql.rules_sql as sql
+import LEGEND.X.sql.rules_sql as sql
 from LEGEND import dispatcher
-from LEGEND.modules.helper_funcs.chat_status import user_admin
-from LEGEND.modules.helper_funcs.string_handling import markdown_parser
+from LEGEND.X.helper_funcs.chat_status import user_admin
+from LEGEND.X.helper_funcs.string_handling import markdown_parser
 
 
 @run_async

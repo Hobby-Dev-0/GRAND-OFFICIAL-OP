@@ -23,14 +23,14 @@ from telegram.ext import (
 from telegram.ext.dispatcher import run_async
 from telegram.utils.helpers import escape_markdown, mention_markdown
 
-import LEGEND.modules.sql.notes_sql as sql
+import LEGEND.X.sql.notes_sql as sql
 from LEGEND import DRAGONS, JOIN_LOGGER, LOGGER, SUPPORT_CHAT, dispatcher
-from LEGEND.modules.disable import DisableAbleCommandHandler
-from LEGEND.modules.helper_funcs.chat_status import connection_status, user_admin
-from LEGEND.modules.helper_funcs.handlers import MessageHandlerChecker
-from LEGEND.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from LEGEND.modules.helper_funcs.msg_types import get_note_type
-from LEGEND.modules.helper_funcs.string_handling import escape_invalid_curly_brackets
+from LEGEND.X.disable import DisableAbleCommandHandler
+from LEGEND.X.helper_funcs.chat_status import connection_status, user_admin
+from LEGEND.X.helper_funcs.handlers import MessageHandlerChecker
+from LEGEND.X.helper_funcs.misc import build_keyboard, revert_buttons
+from LEGEND.X.helper_funcs.msg_types import get_note_type
+from LEGEND.X.helper_funcs.string_handling import escape_invalid_curly_brackets
 
 FILE_MATCHER = re.compile(r"^###file_id(!photo)?###:(.*?)(?:\s|$)")
 STICKER_MATCHER = re.compile(r"^###sticker(!photo)?###:")

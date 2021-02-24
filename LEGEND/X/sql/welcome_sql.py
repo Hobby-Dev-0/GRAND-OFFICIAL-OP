@@ -4,8 +4,8 @@ from typing import Union
 
 from sqlalchemy import BigInteger, Boolean, Column, Integer, String, UnicodeText
 
-from LEGEND.modules.helper_funcs.msg_types import Types
-from LEGEND.modules.sql import BASE, SESSION
+from LEGEND.X.helper_funcs.msg_types import Types
+from LEGEND.X.sql import BASE, SESSION
 
 DEFAULT_WELCOME = "Hey {first}, how are you?"
 DEFAULT_GOODBYE = "Nice knowing ya!"

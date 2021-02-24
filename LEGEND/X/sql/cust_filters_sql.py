@@ -2,8 +2,8 @@ import threading
 
 from sqlalchemy import Boolean, Column, Integer, String, UnicodeText, distinct, func
 
-from LEGEND.modules.helper_funcs.msg_types import Types
-from LEGEND.modules.sql import BASE, SESSION
+from LEGEND.X.helper_funcs.msg_types import Types
+from LEGEND.X.sql import BASE, SESSION
 
 
 class CustomFilters(BASE):

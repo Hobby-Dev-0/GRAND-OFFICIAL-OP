@@ -4,8 +4,8 @@ import requests
 from telegram.ext import CommandHandler, run_async
 
 from LEGEND import dispatcher
-from LEGEND.modules.helper_funcs.alternate import send_message
-from LEGEND.modules.helper_funcs.chat_status import user_admin
+from LEGEND.X.helper_funcs.alternate import send_message
+from LEGEND.X.helper_funcs.chat_status import user_admin
 
 
 @run_async

@@ -6,11 +6,11 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, run_async
 from telegram.utils.helpers import mention_html
 
-import LEGEND.modules.sql.blacklistusers_sql as sql
+import LEGEND.X.sql.blacklistusers_sql as sql
 from LEGEND import DEMONS, DEV_USERS, DRAGONS, OWNER_ID, TIGERS, WOLVES, dispatcher
-from LEGEND.modules.helper_funcs.chat_status import dev_plus
-from LEGEND.modules.helper_funcs.extraction import extract_user, extract_user_and_text
-from LEGEND.modules.log_channel import gloggable
+from LEGEND.X.helper_funcs.chat_status import dev_plus
+from LEGEND.X.helper_funcs.extraction import extract_user, extract_user_and_text
+from LEGEND.X.log_channel import gloggable
 
 BLACKLISTWHITELIST = [OWNER_ID] + DEV_USERS + DRAGONS + WOLVES + DEMONS
 BLABLEUSERS = [OWNER_ID] + DEV_USERS

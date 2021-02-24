@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Numeric, String
 
-from LEGEND.modules.sql import BASE, SESSION
+from LEGEND.X.sql import BASE, SESSION
 
 
 class forceSubscribe(BASE):

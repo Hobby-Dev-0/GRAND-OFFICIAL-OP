@@ -54,13 +54,13 @@ from LEGEND import (
     updater,
 )
 
-# needed to dynamically load modules
+# needed to dynamically load X
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from LEGEND.modules import ALL_MODULES
-from LEGEND.modules.helper_funcs.alternate import typing_action
-from LEGEND.modules.helper_funcs.chat_status import is_user_admin
-from LEGEND.modules.helper_funcs.misc import paginate_modules
-from LEGEND.modules.helper_funcs.readable_time import get_readable_time
+from LEGEND.X import ALL_MODULES
+from LEGEND.X.helper_funcs.alternate import typing_action
+from LEGEND.X.helper_funcs.chat_status import is_user_admin
+from LEGEND.X.helper_funcs.misc import paginate_X
+from LEGEND.X.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
 Hello there, I'm [𝓓𝓪𝓲𝓼𝔂 𝓧](https://telegra.ph/file/473cc17913393959e0667.jpg)
@@ -91,7 +91,7 @@ HELP_STRINGS = f"""
 ✪ /help: Click this, I'll let you know about myself!
 ✪ /donate: You can support my creater using this command.
 ✪ /settings: 
-   ◔ in PM: will send you your settings for all supported modules.
+   ◔ in PM: will send you your settings for all supported X.
    ◔ in a Group: will redirect you to pm, with all that chat's settings.
 """.format(
     dispatcher.bot.first_name,
@@ -118,14 +118,14 @@ USER_SETTINGS = {}
 GDPR = []
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("LEGEND.modules." + module_name)
+    imported_module = importlib.import_module("LEGEND.X." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
     if not imported_module.__mod_name__.lower() in IMPORTED:
         IMPORTED[imported_module.__mod_name__.lower()] = imported_module
     else:
-        raise Exception("Can't have two modules with the same name! Please change one")
+        raise Exception("Can't have two X with the same name! Please change one")
 
     if hasattr(imported_module, "__help__") and imported_module.__help__:
         HELPABLE[imported_module.__mod_name__.lower()] = imported_module
@@ -162,7 +162,7 @@ for module_name in ALL_MODULES:
 # do not async
 def send_help(chat_id, text, keyboard=None):
     if not keyboard:
-        keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
+        keyboard = InlineKeyboardMarkup(paginate_X(0, HELPABLE, "help"))
     dispatcher.bot.send_message(
         chat_id=chat_id, text=text, parse_mode=ParseMode.MARKDOWN, reply_markup=keyboard
     )
@@ -317,7 +317,7 @@ def help_button(update, context):
                 HELP_STRINGS,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(curr_page - 1, HELPABLE, "help")
+                    paginate_X(curr_page - 1, HELPABLE, "help")
                 ),
             )
 
@@ -327,7 +327,7 @@ def help_button(update, context):
                 HELP_STRINGS,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(next_page + 1, HELPABLE, "help")
+                    paginate_X(next_page + 1, HELPABLE, "help")
                 ),
             )
 
@@ -336,7 +336,7 @@ def help_button(update, context):
                 text=HELP_STRINGS,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(0, HELPABLE, "help")
+                    paginate_X(0, HELPABLE, "help")
                 ),
             )
 
@@ -478,7 +478,7 @@ def LEGEND_about_callback(update, context):
             f"\n<i>To Use This Bot, You Need To Read Terms and Conditions Carefully.</i>\n"
             f"\n✪ We always respect your privacy \n  We never log into bot's api and spying on you \n  We use a encripted database \n  Bot will automatically stops if someone logged in with api."
             f"\n✪ Always try to keep credits, so \n  This hardwork is done by Infinity_Bots team spending many sleepless nights.. So, Respect it."
-            f"\n✪ Some modules in this bot is owned by different authors, So, \n  All credits goes to them \n  Also for <b>Paul Larson for Marie</b>."
+            f"\n✪ Some X in this bot is owned by different authors, So, \n  All credits goes to them \n  Also for <b>Paul Larson for Marie</b>."
             f"\n✪ If you need to ask anything about \n  this bot, Go @{SUPPORT_CHAT}."
             f"\n✪ If you asking nonsense in Support \n  Chat, you will get warned/banned."
             f"\n✪ All api's we used owned by originnal authors \n  Some api's we use Free version \n  Please don't overuse AI Chat."
@@ -595,7 +595,7 @@ def send_settings(chat_id, user_id, user=False):
                     chat_name
                 ),
                 reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(0, CHAT_SETTINGS, "stngs", chat=chat_id)
+                    paginate_X(0, CHAT_SETTINGS, "stngs", chat=chat_id)
                 ),
             )
         else:
@@ -647,7 +647,7 @@ def settings_button(update, context):
                 "you're interested in.".format(chat.title),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(
+                    paginate_X(
                         curr_page - 1, CHAT_SETTINGS, "stngs", chat=chat_id
                     )
                 ),
@@ -662,7 +662,7 @@ def settings_button(update, context):
                 "you're interested in.".format(chat.title),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(
+                    paginate_X(
                         next_page + 1, CHAT_SETTINGS, "stngs", chat=chat_id
                     )
                 ),
@@ -676,7 +676,7 @@ def settings_button(update, context):
                 "you're interested in.".format(escape_markdown(chat.title)),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(0, CHAT_SETTINGS, "stngs", chat=chat_id)
+                    paginate_X(0, CHAT_SETTINGS, "stngs", chat=chat_id)
                 ),
             )
 
@@ -866,7 +866,7 @@ def main():
 
 
 if __name__ == "__main__":
-    LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
+    LOGGER.info("Successfully loaded X: " + str(ALL_MODULES))
     telethn.start(bot_token=TOKEN)
     pbot.start()
     main()

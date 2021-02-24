@@ -16,7 +16,7 @@ from LEGEND.__main__ import (
     USER_INFO,
     USER_SETTINGS,
 )
-from LEGEND.modules.helper_funcs.chat_status import dev_plus, sudo_plus
+from LEGEND.X.helper_funcs.chat_status import dev_plus, sudo_plus
 
 
 @run_async
@@ -29,7 +29,7 @@ def load(update: Update, context: CallbackContext):
     )
 
     try:
-        imported_module = importlib.import_module("LEGEND.modules." + text)
+        imported_module = importlib.import_module("LEGEND.X." + text)
     except:
         load_messasge.edit_text("Does that module even exist?")
         return
@@ -99,7 +99,7 @@ def unload(update: Update, context: CallbackContext):
     )
 
     try:
-        imported_module = importlib.import_module("LEGEND.modules." + text)
+        imported_module = importlib.import_module("LEGEND.X." + text)
     except:
         unload_messasge.edit_text("Does that module even exist?")
         return
@@ -162,23 +162,23 @@ def unload(update: Update, context: CallbackContext):
 
 @run_async
 @sudo_plus
-def listmodules(update: Update, context: CallbackContext):
+def listX(update: Update, context: CallbackContext):
     message = update.effective_message
     module_list = []
 
     for helpable_module in HELPABLE:
         helpable_module_info = IMPORTED[helpable_module]
         file_info = IMPORTED[helpable_module_info.__mod_name__.lower()]
-        file_name = file_info.__name__.rsplit("LEGEND.modules.", 1)[1]
+        file_name = file_info.__name__.rsplit("LEGEND.X.", 1)[1]
         mod_name = file_info.__mod_name__
         module_list.append(f"- <code>{mod_name} ({file_name})</code>\n")
-    module_list = "Following modules are loaded : \n\n" + "".join(module_list)
+    module_list = "Following X are loaded : \n\n" + "".join(module_list)
     message.reply_text(module_list, parse_mode=ParseMode.HTML)
 
 
 LOAD_HANDLER = CommandHandler("load", load)
 UNLOAD_HANDLER = CommandHandler("unload", unload)
-LISTMODULES_HANDLER = CommandHandler("listmodules", listmodules)
+LISTMODULES_HANDLER = CommandHandler("listX", listX)
 
 dispatcher.add_handler(LOAD_HANDLER)
 dispatcher.add_handler(UNLOAD_HANDLER)

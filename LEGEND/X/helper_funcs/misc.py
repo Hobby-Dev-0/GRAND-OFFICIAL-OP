@@ -38,9 +38,9 @@ def split_message(msg: str) -> List[str]:
         return result
 
 
-def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
+def paginate_X(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
     if not chat:
-        modules = sorted(
+        X = sorted(
             [
                 EqInlineKeyboardButton(
                     x.__mod_name__,
@@ -52,7 +52,7 @@ def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
             ]
         )
     else:
-        modules = sorted(
+        X = sorted(
             [
                 EqInlineKeyboardButton(
                     x.__mod_name__,
@@ -64,14 +64,14 @@ def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
             ]
         )
 
-    pairs = [modules[i * 3 : (i + 1) * 3] for i in range((len(modules) + 3 - 1) // 3)]
+    pairs = [X[i * 3 : (i + 1) * 3] for i in range((len(X) + 3 - 1) // 3)]
 
-    round_num = len(modules) / 3
-    calc = len(modules) - round(round_num)
+    round_num = len(X) / 3
+    calc = len(X) - round(round_num)
     if calc == 1:
-        pairs.append((modules[-1],))
+        pairs.append((X[-1],))
     elif calc == 2:
-        pairs.append((modules[-1],))
+        pairs.append((X[-1],))
 
     else:
         pairs += [[EqInlineKeyboardButton("Back to Info", callback_data="aboutmanu_")]]

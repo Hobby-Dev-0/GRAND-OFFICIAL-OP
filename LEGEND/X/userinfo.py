@@ -13,7 +13,7 @@ from telethon import events
 from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.types import ChannelParticipantsAdmins
 
-import LEGEND.modules.sql.userinfo_sql as sql
+import LEGEND.X.sql.userinfo_sql as sql
 from LEGEND import (
     DEMONS,
     DEV_USERS,
@@ -27,12 +27,12 @@ from LEGEND import (
 )
 from LEGEND import telethn as SaitamaTelethonClient
 from LEGEND.__main__ import STATS, TOKEN, USER_INFO
-from LEGEND.modules.disable import DisableAbleCommandHandler
-from LEGEND.modules.helper_funcs.chat_status import sudo_plus
-from LEGEND.modules.helper_funcs.extraction import extract_user
-from LEGEND.modules.sql.afk_sql import check_afk_status, is_afk
-from LEGEND.modules.sql.global_bans_sql import is_user_gbanned
-from LEGEND.modules.sql.users_sql import get_user_num_chats
+from LEGEND.X.disable import DisableAbleCommandHandler
+from LEGEND.X.helper_funcs.chat_status import sudo_plus
+from LEGEND.X.helper_funcs.extraction import extract_user
+from LEGEND.X.sql.afk_sql import check_afk_status, is_afk
+from LEGEND.X.sql.global_bans_sql import is_user_gbanned
+from LEGEND.X.sql.users_sql import get_user_num_chats
 
 
 def no_by_per(totalhp, percentage):

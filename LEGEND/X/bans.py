@@ -15,8 +15,8 @@ from LEGEND import (
     WOLVES,
     dispatcher,
 )
-from LEGEND.modules.disable import DisableAbleCommandHandler
-from LEGEND.modules.helper_funcs.chat_status import (
+from LEGEND.X.disable import DisableAbleCommandHandler
+from LEGEND.X.helper_funcs.chat_status import (
     bot_admin,
     can_restrict,
     connection_status,
@@ -26,9 +26,9 @@ from LEGEND.modules.helper_funcs.chat_status import (
     user_admin,
     user_can_ban,
 )
-from LEGEND.modules.helper_funcs.extraction import extract_user_and_text
-from LEGEND.modules.helper_funcs.string_handling import extract_time
-from LEGEND.modules.log_channel import gloggable, loggable
+from LEGEND.X.helper_funcs.extraction import extract_user_and_text
+from LEGEND.X.helper_funcs.string_handling import extract_time
+from LEGEND.X.log_channel import gloggable, loggable
 
 
 @run_async

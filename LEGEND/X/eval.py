@@ -10,7 +10,7 @@ from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, CommandHandler, run_async
 
 from LEGEND import LOGGER, dispatcher
-from LEGEND.modules.helper_funcs.chat_status import dev_plus
+from LEGEND.X.helper_funcs.chat_status import dev_plus
 
 namespaces = {}
 
@@ -77,7 +77,7 @@ def do(func, bot, update):
 
     os.chdir(os.getcwd())
     with open(
-        os.path.join(os.getcwd(), "LEGEND/modules/helper_funcs/temp.txt"), "w"
+        os.path.join(os.getcwd(), "LEGEND/X/helper_funcs/temp.txt"), "w"
     ) as temp:
         temp.write(body)
 

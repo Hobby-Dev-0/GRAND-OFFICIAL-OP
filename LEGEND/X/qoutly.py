@@ -27,23 +27,23 @@ async def process(msg, user, client, reply, replied=None):
     if not os.path.isdir("resources"):
         os.mkdir("resources", 0o755)
         urllib.request.urlretrieve(
-            "https://github.com/erenmetesar/modules-repo/raw/master/Roboto-Regular.ttf",
+            "https://github.com/erenmetesar/X-repo/raw/master/Roboto-Regular.ttf",
             "resources/Roboto-Regular.ttf",
         )
         urllib.request.urlretrieve(
-            "https://github.com/erenmetesar/modules-repo/raw/master/Quivira.otf",
+            "https://github.com/erenmetesar/X-repo/raw/master/Quivira.otf",
             "resources/Quivira.otf",
         )
         urllib.request.urlretrieve(
-            "https://github.com/erenmetesar/modules-repo/raw/master/Roboto-Medium.ttf",
+            "https://github.com/erenmetesar/X-repo/raw/master/Roboto-Medium.ttf",
             "resources/Roboto-Medium.ttf",
         )
         urllib.request.urlretrieve(
-            "https://github.com/erenmetesar/modules-repo/raw/master/DroidSansMono.ttf",
+            "https://github.com/erenmetesar/X-repo/raw/master/DroidSansMono.ttf",
             "resources/DroidSansMono.ttf",
         )
         urllib.request.urlretrieve(
-            "https://github.com/erenmetesar/modules-repo/raw/master/Roboto-Italic.ttf",
+            "https://github.com/erenmetesar/X-repo/raw/master/Roboto-Italic.ttf",
             "resources/Roboto-Italic.ttf",
         )
 
@@ -372,7 +372,7 @@ async def no_photo(reply, tot):
 async def emoji_fetch(emoji):
     emojis = json.loads(
         urllib.request.urlopen(
-            "https://github.com/erenmetesar/modules-repo/raw/master/emojis.txt"
+            "https://github.com/erenmetesar/X-repo/raw/master/emojis.txt"
         )
         .read()
         .decode()

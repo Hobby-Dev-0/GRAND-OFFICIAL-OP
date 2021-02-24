@@ -6,13 +6,13 @@ from telegram import ParseMode , Bot, Update
 from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
 
 from LEGEND import dispatcher, REDIS
-from LEGEND.modules.disable import DisableAbleCommandHandler
-from LEGEND.modules.helper_funcs.chat_status import (
+from LEGEND.X.disable import DisableAbleCommandHandler
+from LEGEND.X.helper_funcs.chat_status import (
     bot_admin,
     user_admin
 )
-from LEGEND.modules.helper_funcs.extraction import extract_user_and_text
-from LEGEND.modules.helper_funcs.alternate import typing_action
+from LEGEND.X.helper_funcs.extraction import extract_user_and_text
+from LEGEND.X.helper_funcs.alternate import typing_action
 
 
 

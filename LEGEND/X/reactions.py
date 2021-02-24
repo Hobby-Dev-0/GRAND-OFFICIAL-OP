@@ -4,7 +4,7 @@ from telegram import Update
 from telegram.ext import CallbackContext, run_async
 
 from LEGEND import dispatcher
-from LEGEND.modules.disable import DisableAbleCommandHandler
+from LEGEND.X.disable import DisableAbleCommandHandler
 
 reactions = [
     "( ͡° ͜ʖ ͡°)",

@@ -6,7 +6,7 @@ from telethon.errors.rpcerrorlist import MessageDeleteForbiddenError
 from telethon.tl.types import ChannelParticipantsAdmins
 
 from LEGEND import DEV_USERS, telethn
-from LEGEND.modules.helper_funcs.telethn.chatstatus import (
+from LEGEND.X.helper_funcs.telethn.chatstatus import (
     can_delete_messages,
     user_is_admin,
 )

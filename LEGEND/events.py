@@ -204,7 +204,7 @@ def load_module(shortname):
         mod.tbot = tbot
         mod.logger = logging.getLogger(shortname)
         spec.loader.exec_module(mod)
-        sys.modules["LEGEND.X." + shortname] = mod
+        sys.X["LEGEND.X." + shortname] = mod
         print("Successfully imported " + shortname)
 
 

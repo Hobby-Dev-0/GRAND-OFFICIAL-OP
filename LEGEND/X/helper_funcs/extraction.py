@@ -6,7 +6,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 
 from LEGEND import LOGGER
-from LEGEND.modules.users import get_user_id
+from LEGEND.X.users import get_user_id
 
 
 def id_from_reply(message):

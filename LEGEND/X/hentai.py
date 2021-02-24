@@ -8,10 +8,10 @@ from telegram.ext import CommandHandler
 from telegram.ext.dispatcher import run_async
 from telegram.utils.helpers import mention_html
 
-import LEGEND.modules.sql.hentai_sql as sql
+import LEGEND.X.sql.hentai_sql as sql
 from LEGEND import EVENT_LOGS, dispatcher
-from LEGEND.modules.disable import DisableAbleCommandHandler
-from LEGEND.modules.helper_funcs.filters import CustomFilters
+from LEGEND.X.disable import DisableAbleCommandHandler
+from LEGEND.X.helper_funcs.filters import CustomFilters
 
 
 def hentai_supplier(func):

@@ -9,7 +9,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Upda
 from telegram.ext import CallbackContext, CallbackQueryHandler, run_async
 
 from LEGEND import DEV_USERS, DRAGONS, OWNER_ID, dispatcher
-from LEGEND.modules.disable import DisableAbleCommandHandler
+from LEGEND.X.disable import DisableAbleCommandHandler
 
 info_btn = "More Information"
 kaizoku_btn = "Kaizoku ☠️"

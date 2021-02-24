@@ -6,10 +6,10 @@ from telegram.ext import CallbackQueryHandler, CommandHandler, Filters, run_asyn
 from telegram.utils.helpers import mention_html
 
 from LEGEND import dispatcher
-from LEGEND.modules.disable import DisableAbleCommandHandler
-from LEGEND.modules.helper_funcs.alternate import typing_action
-from LEGEND.modules.helper_funcs.chat_status import bot_admin, user_admin
-from LEGEND.modules.helper_funcs.extraction import extract_user_and_text
+from LEGEND.X.disable import DisableAbleCommandHandler
+from LEGEND.X.helper_funcs.alternate import typing_action
+from LEGEND.X.helper_funcs.chat_status import bot_admin, user_admin
+from LEGEND.X.helper_funcs.extraction import extract_user_and_text
 
 
 @run_async

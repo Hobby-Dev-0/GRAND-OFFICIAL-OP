@@ -22,7 +22,7 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import escape_markdown, mention_html, mention_markdown
 
-import LEGEND.modules.sql.welcome_sql as sql
+import LEGEND.X.sql.welcome_sql as sql
 from LEGEND import (
     DEMONS,
     DEV_USERS,
@@ -35,15 +35,15 @@ from LEGEND import (
     dispatcher,
     sw,
 )
-from LEGEND.modules.helper_funcs.chat_status import is_user_ban_protected, user_admin
-from LEGEND.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from LEGEND.modules.helper_funcs.msg_types import get_welcome_type
-from LEGEND.modules.helper_funcs.string_handling import (
+from LEGEND.X.helper_funcs.chat_status import is_user_ban_protected, user_admin
+from LEGEND.X.helper_funcs.misc import build_keyboard, revert_buttons
+from LEGEND.X.helper_funcs.msg_types import get_welcome_type
+from LEGEND.X.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_parser,
 )
-from LEGEND.modules.log_channel import loggable
-from LEGEND.modules.sql.global_bans_sql import is_user_gbanned
+from LEGEND.X.log_channel import loggable
+from LEGEND.X.sql.global_bans_sql import is_user_gbanned
 
 VALID_WELCOME_FORMATTERS = [
     "first",

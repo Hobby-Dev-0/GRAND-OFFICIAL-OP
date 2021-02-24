@@ -14,19 +14,19 @@ from telegram.ext import CommandHandler, Filters, MessageHandler
 from telegram.ext.dispatcher import run_async
 from telegram.utils.helpers import mention_html
 
-import LEGEND.modules.sql.locks_sql as sql
+import LEGEND.X.sql.locks_sql as sql
 from LEGEND import DRAGONS, LOGGER, dispatcher
-from LEGEND.modules.connection import connected
-from LEGEND.modules.disable import DisableAbleCommandHandler
-from LEGEND.modules.helper_funcs.alternate import send_message, typing_action
-from LEGEND.modules.helper_funcs.chat_status import (
+from LEGEND.X.connection import connected
+from LEGEND.X.disable import DisableAbleCommandHandler
+from LEGEND.X.helper_funcs.alternate import send_message, typing_action
+from LEGEND.X.helper_funcs.chat_status import (
     can_delete,
     is_bot_admin,
     is_user_admin,
     user_admin,
     user_not_admin,
 )
-from LEGEND.modules.log_channel import loggable
+from LEGEND.X.log_channel import loggable
 
 ad = AlphabetDetector()
 

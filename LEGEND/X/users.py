@@ -11,10 +11,10 @@ from telegram.ext import (
     run_async,
 )
 
-import LEGEND.modules.sql.users_sql as sql
+import LEGEND.X.sql.users_sql as sql
 from LEGEND import DEV_USERS, LOGGER, OWNER_ID, dispatcher
-from LEGEND.modules.helper_funcs.chat_status import dev_plus, sudo_plus
-from LEGEND.modules.sql.users_sql import get_all_users
+from LEGEND.X.helper_funcs.chat_status import dev_plus, sudo_plus
+from LEGEND.X.sql.users_sql import get_all_users
 
 USERS_GROUP = 4
 CHAT_GROUP = 5

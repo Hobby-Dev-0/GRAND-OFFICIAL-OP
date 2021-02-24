@@ -8,8 +8,8 @@ from telegram import Update
 from telegram.ext import CallbackContext, run_async
 
 from LEGEND import dispatcher
-from LEGEND.modules.disable import DisableAbleCommandHandler
-from LEGEND.modules.thonkify_dict import thonkifydict
+from LEGEND.X.disable import DisableAbleCommandHandler
+from LEGEND.X.thonkify_dict import thonkifydict
 
 
 @run_async

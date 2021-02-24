@@ -28,7 +28,7 @@ from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboard
 
 from LEGEND import DRAGONS as SUDO_USERS
 from LEGEND import pbot
-from LEGEND.modules.sql import forceSubscribe_sql as sql
+from LEGEND.X.sql import forceSubscribe_sql as sql
 
 logging.basicConfig(level=logging.INFO)
 

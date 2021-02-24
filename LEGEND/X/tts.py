@@ -7,8 +7,8 @@ from telegram import ChatAction
 from telegram.ext import run_async
 
 from LEGEND import dispatcher
-from LEGEND.modules.disable import DisableAbleCommandHandler
-from LEGEND.modules.helper_funcs.alternate import send_action, typing_action
+from LEGEND.X.disable import DisableAbleCommandHandler
+from LEGEND.X.helper_funcs.alternate import send_action, typing_action
 
 
 @run_async
