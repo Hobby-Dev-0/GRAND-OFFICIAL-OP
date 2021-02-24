@@ -1,12 +1,12 @@
 {
-      "name": "Daisy X",
+      "name": "LEGENDBOT",
       "description": "An Anime themed Telegram group management bot.",
       "keywords": [
          "telegram",
          "anime",
          "group",
          "manager",
-         "LEGEND"
+         "legend"
       ],   
    "repository": "https://github.com/LEGENDXOP/GRAND-OFFICIAL-OP",
    "addons": [
@@ -85,7 +85,7 @@
          "required": false,
          "value": "1141839926 1186105905 1204360944 1082702383 1321570688 1116300562 694380168 1347096051"
       },
-      "sw_api": {
+      "SPAMWATCH_API": {
          "description": "Spamwatch API Token, Get one from @SpamWatchBot.",
          "required": false,
          "value": ""
@@ -133,7 +133,7 @@
          "required": false,
          "value": ""
       },
-      "No_LOAD": {
+      "NO_LOAD": {
          "description": "Dont load these modules cause they shit, space separation",
          "required": false,
          "value": ""
@@ -193,8 +193,8 @@
       "anime",
       "group",
       "manager",
-      "daisy"
+      "legend"
    ],
-   "name": "LEGEND",
+   "name": "legend",
    "repository": "https://github.com/LEGENDXOP/GRAND-OFFICIAL-OP"
 }
