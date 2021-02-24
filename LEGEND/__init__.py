@@ -104,7 +104,7 @@ if ENV:
         raise Exception("Your blacklisted chats list does not contain valid integers.")
 
 else:
-    from DaisyX.config import Development as Config
+    from LEGEND.config import Development as Config
 
     TOKEN = Config.TOKEN
 
