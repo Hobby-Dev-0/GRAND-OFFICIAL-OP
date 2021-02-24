@@ -18,9 +18,9 @@ jobs:
 
         with:
 
-          find: "juliabot"
+          find: "DaisyX"
 
-          replace: "legend"
+          replace: "LEGEND"
 
       - name: Create Pull Request
 
